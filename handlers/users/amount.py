@@ -13,7 +13,7 @@ async def get_amound(message:types.Message, state : FSMContext):
     amound = message.text
 
 
-   
+
 
 
 
@@ -38,7 +38,7 @@ async def get_amound(message:types.Message, state : FSMContext):
             text = f"🏠 Kiritildi {amound} Qozog'iston tengesi. 🇰🇿\n\n🇺🇿 {round(sum[3] * amound, 2)} O'zbek so'mi.\n🇷🇺 {round(kzt_rub * amound, 2)} Rossiya rubli.\n🇺🇸 {round(kzt_usd * amound, 2)} Aqsh dollari.\n🇪🇺 {round(kzt_eur * amound, 2)} EVRO."
             await message.answer(text)
         elif currency.lower() == "uzs":
-            text = f"🏠 Kiritildi {amound} O'zbekiston so'mi. 🇺🇿\n\n🇷🇺 {round(amound / sum[0], 2)} Rossiya rubli.\n🇺🇸 {round(sum[1] / amound, 2)} Aqsh dollari.\n🇪🇺 {round(sum[2] / amound, 2)} EVRO.\n🇰🇿 {round(amound / sum[3], 2)} Qozog'iston tengesi."
+            text = f"🏠 Kiritildi {amound} O'zbekiston so'mi. 🇺🇿\n\n🇷🇺 {round(amound / sum[0], 2)} Rossiya rubli.\n🇺🇸 {round(amound / sum[1] ,  2)} Aqsh dollari.\n🇪🇺 {round(amound / sum[2]  , 2)} EVRO.\n🇰🇿 {round(amound / sum[3], 2)} Qozog'iston tengesi."
             await message.answer(text)
 
 
