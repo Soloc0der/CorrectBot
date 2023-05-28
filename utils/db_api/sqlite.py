@@ -36,7 +36,7 @@ class Database:
             language varchar(3),
             PRIMARY KEY (id)
             );
-"""
+            """
         self.execute(sql, commit=True)
 
     @staticmethod
